@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>头像修改页面</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.header {
+			height: 40px;
+			background-color: #f0f0f0;
+			line-height: 40px;
+		}
+		#imgName {
+			width: 200px;
+		}
+		#selectPic {
+			width: 64px;
+		}
+		.imgContainer {
+			border: 1px solid #9baab3;
+			margin: 10px 0px;
+			width: 298px;
+			height: 298px;
+			background-image: url(http://localhost:8066/screenShot/unload.png);
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<input type="text" name="imgName" id='imgName' readonly="readonly">
+		<input type="file" name="selectPic" id='selectPic' onchange="selecPic();" value="file">
+		<div class="imgContainer">
+		</div>
+	</div>
+	<script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./portraitRevise.js"></script>
+</body>
+</html>
