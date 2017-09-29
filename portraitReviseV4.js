@@ -372,7 +372,7 @@ function imageTransToCanvas(imageURL, left, top, width, height) {
 	var targetCanvas = null;
 	img.onload = function() {
 		portraitGroupsArr.forEach(function(item, index) {
-			targetCanvas = document.getElementById(item.class);
+			targetCanvas = document.querySelector('.' + item.class);
 			targetCtx.push(targetCanvas.getContext('2d'));
 			targetCtx[index].clearRect(0,0, item.width, item.height);
 			targetCtx[index].drawImage(img, left - clearCanvasObj.left, top - clearCanvasObj.top, width, height, 0, 0 , item.width, item.height);
